@@ -1,0 +1,59 @@
+手表网站管理员后台部署说明（GitHub Pages + Cloudflare Worker）
+
+你会得到：
+- admin.html：管理员登录和商品编辑页面
+- cloudflare-worker.js：安全 API，负责验证账号、读写 GitHub 商品资料及上传图片
+- wrangler.toml：Worker 部署配置
+- index.html / products.json / images：更新后的公开商品网站文件
+
+重要说明
+1. GitHub Pages 是静态网站，不能自己安全地保存管理员密码或直接写回仓库。因此需要 Cloudflare Worker 作为后台 API。
+2. 这里实现的是“独立管理员账号/密码登录”，由 Worker 校验；GitHub Token 只保存在 Cloudflare Worker Secrets，不会暴露给浏览器。它不是 GitHub OAuth 登录。
+3. 你此前选项里提到“GitHub 登录管理后台”和“独立账号密码登录”，这两种身份验证方式并不相同。本套按你最后明确选择的“独立账号密码登录”实现，后台通过 GitHub API 提交文件。
+4. 这是一套待部署文件，不代表已经上线或已修改你 GitHub 仓库。首次需要按下面步骤配置；我无法替你登录第三方账户或提交仓库。
+
+A. 上传网站文件到 GitHub（首次启用时）
+1. 打开 https://github.com/jiaweixu655-ctrl/watch-catalog
+2. 将本包的 index.html、products.json、admin.html 和 images/watch-001.jpg 放到仓库根目录/对应 images 目录。若 GitHub 提示替换，确认替换对应文件。
+3. 提交到 main 分支。保留原有 GitHub Pages 设置（main / root）。
+4. 公开管理页面地址将是 https://jiaweixu655-ctrl.github.io/watch-catalog/admin.html 。注意：页面 URL 本身不是保密措施，安全性来自后台 API 的账号密码验证。
+
+B. 创建 GitHub Token（只给仓库内容读写权限）
+1. GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token。
+2. Resource owner 选择 jiaweixu655-ctrl；Repository access 仅选 watch-catalog。
+3. Repository permissions 中 Contents 设为 Read and write。其他权限保持 No access；设置较短有效期并妥善保管 Token。
+4. 生成后复制 Token。不要发给我，不要放进 admin.html 或任何公开文件。
+
+C. 部署 Cloudflare Worker
+1. 注册/登录 Cloudflare，进入 Workers & Pages，创建 Worker，命名 watch-catalog-admin-api。
+2. 将 cloudflare-worker.js 的全部内容粘贴到 Worker 编辑器，保存并 Deploy。也可以用 Wrangler CLI 配合 wrangler.toml 部署。
+3. 在 Worker → Settings → Variables and Secrets 配置以下值：
+   普通变量：GITHUB_OWNER=jiaweixu655-ctrl；GITHUB_REPO=watch-catalog；GITHUB_BRANCH=main；SITE_ORIGIN=https://jiaweixu655-ctrl.github.io
+   Secret：GITHUB_TOKEN=刚创建的 GitHub Token
+   Secret：ADMIN_USERNAME=你自己设置的管理员账号
+   Secret：ADMIN_PASSWORD=自己设置的强密码（建议 16 位以上，不要复用其他网站密码）
+   Secret：SESSION_SECRET=一段随机长字符串（建议至少 32 个随机字符）
+4. 保存变量后重新 Deploy。Worker 会提供类似 https://watch-catalog-admin-api.<你的子域>.workers.dev 的 URL。
+
+D. 连接管理页面
+1. 打开 admin.html，找到这一行：
+   const API_BASE = "https://REPLACE-WITH-YOUR-WORKER.workers.dev";
+2. 把它替换为你自己的 Worker URL，例如 https://watch-catalog-admin-api.你的子域.workers.dev（不要照抄示例域名）。
+3. 将修改后的 admin.html 提交到 GitHub main 分支。
+4. 打开 https://jiaweixu655-ctrl.github.io/watch-catalog/admin.html，使用你在 Worker Secrets 设置的账号和密码登录。
+
+日常使用
+- 修改商品：登录 → 点击对应商品“编辑” → 改价格、型号、中英文名称/介绍、分类 → “保存并发布”。
+- 添加商品：点击“添加商品”，填写唯一编号、名称和价格；可选上传图片。
+- 下架商品：点击“下架”；商品资料保留但公开网站不显示。需要时可重新上架。
+- 换图片：编辑商品，选择图片文件，保存。支持 JPG、PNG、WebP，建议小于 4 MB。
+- 发布后通常等 1–5 分钟，再刷新公开网站。
+
+安全和注意事项
+- 不要将 GitHub Token 放入前端文件或公开仓库。
+- 管理员密码和 SESSION_SECRET 必须通过 Cloudflare 的 Secret 设置，不能写在代码里。
+- 任何能访问管理页面的人都可以看到登录框，但没有正确账号密码不能读取/修改商品。
+- 建议为 GitHub 开启双重验证，并给 Token 设置到期时间。
+- 若出现 CORS 错误，确认 SITE_ORIGIN 精确为 https://jiaweixu655-ctrl.github.io（不要加 /watch-catalog）。
+- 如果 GitHub API 报 401/403，请检查 Token 是否过期、仓库范围是否正确、Contents 是否 Read and write。
+- 若你实际想要“用 GitHub 账号 OAuth 登录”而不是独立账号密码，需要换用 OAuth App/身份提供商方案；这不是本包当前的登录模式。

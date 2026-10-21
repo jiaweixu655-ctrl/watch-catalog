@@ -1,0 +1,9 @@
+name = "watch-catalog-admin-api"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-10-22"
+
+[vars]
+GITHUB_OWNER = "jiaweixu655-ctrl"
+GITHUB_REPO = "watch-catalog"
+GITHUB_BRANCH = "main"
+SITE_ORIGIN = "https://jiaweixu655-ctrl.github.io"

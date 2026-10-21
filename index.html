@@ -26,7 +26,7 @@ nav{display:flex;gap:20px;align-items:center;font-size:13px;color:#eee}nav a:hov
 .card{border:1px solid var(--line);background:linear-gradient(150deg,#171512,#080808);border-radius:8px;overflow:hidden;min-width:0;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#a88a4f}
 .product-art{height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#49351b 0,#17130e 40%,#080808 75%)}
 .product-art:before{content:"";position:absolute;width:130%;height:1px;background:#c7a25b33;transform:rotate(-28deg)}
-.watchface{width:75px;height:90px;border:7px solid #b5b5b5;border-radius:22px;background:linear-gradient(135deg,#111,#050505);box-shadow:0 0 0 3px #333,0 8px 22px #000;position:relative;display:flex;align-items:center;justify-content:center}
+.product-photo{width:100%;height:100%;object-fit:contain;background:#fff;position:absolute;inset:0}.watchface{width:75px;height:90px;border:7px solid #b5b5b5;border-radius:22px;background:linear-gradient(135deg,#111,#050505);box-shadow:0 0 0 3px #333,0 8px 22px #000;position:relative;display:flex;align-items:center;justify-content:center}
 .watchface:before,.watchface:after{content:"";position:absolute;left:19px;right:19px;height:48px;background:linear-gradient(90deg,#4a3821,#c6a15c,#392916);z-index:0;border-radius:7px}
 .watchface:before{top:-51px}.watchface:after{bottom:-51px}
 .dial{z-index:1;width:53px;height:53px;border:2px solid #d8b86f;border-radius:50%;background:radial-gradient(circle,#17202a,#030303 70%);position:relative}
@@ -76,7 +76,7 @@ footer{border-top:1px solid #6f572e;padding:22px 0;color:#aaa;font-size:12px}.fo
 </main>
 <footer><div class="wrap foot"><span>♕ PRESTIGE TIME · 精品腕表</span><span>Guangzhou, China · Worldwide Shipping / 中国广州 · 全球配送</span><span>© <span id="year"></span> Prestige Time · Demo catalog</span></div></footer>
 <script>
-const PRODUCTS = [{"id": "001", "name_en": "Classic Watch 001", "name_zh": "精品腕表 001", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 199}, {"id": "002", "name_en": "Classic Watch 002", "name_zh": "精品腕表 002", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 229}, {"id": "003", "name_en": "Classic Watch 003", "name_zh": "精品腕表 003", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 259}, {"id": "004", "name_en": "Classic Watch 004", "name_zh": "精品腕表 004", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 219}, {"id": "005", "name_en": "Classic Watch 005", "name_zh": "精品腕表 005", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 239}, {"id": "006", "name_en": "Classic Watch 006", "name_zh": "精品腕表 006", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 279}, {"id": "007", "name_en": "Classic Watch 007", "name_zh": "精品腕表 007", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 189}, {"id": "008", "name_en": "Classic Watch 008", "name_zh": "精品腕表 008", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 219}, {"id": "009", "name_en": "Classic Watch 009", "name_zh": "精品腕表 009", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 249}, {"id": "010", "name_en": "Classic Watch 010", "name_zh": "精品腕表 010", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 279}, {"id": "011", "name_en": "Classic Watch 011", "name_zh": "精品腕表 011", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 229}, {"id": "012", "name_en": "Classic Watch 012", "name_zh": "精品腕表 012", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 259}, {"id": "013", "name_en": "Classic Watch 013", "name_zh": "精品腕表 013", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 229}, {"id": "014", "name_en": "Classic Watch 014", "name_zh": "精品腕表 014", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 259}, {"id": "015", "name_en": "Classic Watch 015", "name_zh": "精品腕表 015", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 289}, {"id": "016", "name_en": "Classic Watch 016", "name_zh": "精品腕表 016", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 239}, {"id": "017", "name_en": "Classic Watch 017", "name_zh": "精品腕表 017", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 269}, {"id": "018", "name_en": "Classic Watch 018", "name_zh": "精品腕表 018", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 299}, {"id": "019", "name_en": "Classic Watch 019", "name_zh": "精品腕表 019", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 209}, {"id": "020", "name_en": "Classic Watch 020", "name_zh": "精品腕表 020", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 209}, {"id": "021", "name_en": "Classic Watch 021", "name_zh": "精品腕表 021", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 239}, {"id": "022", "name_en": "Classic Watch 022", "name_zh": "精品腕表 022", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 279}, {"id": "023", "name_en": "Classic Watch 023", "name_zh": "精品腕表 023", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 259}, {"id": "024", "name_en": "Classic Watch 024", "name_zh": "精品腕表 024", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 259}, {"id": "025", "name_en": "Classic Watch 025", "name_zh": "精品腕表 025", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 179}, {"id": "026", "name_en": "Classic Watch 026", "name_zh": "精品腕表 026", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 209}, {"id": "027", "name_en": "Classic Watch 027", "name_zh": "精品腕表 027", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 239}, {"id": "028", "name_en": "Classic Watch 028", "name_zh": "精品腕表 028", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 279}, {"id": "029", "name_en": "Classic Watch 029", "name_zh": "精品腕表 029", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 229}, {"id": "030", "name_en": "Classic Watch 030", "name_zh": "精品腕表 030", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 259}];
+let PRODUCTS = [];
 const WA_NUMBER = "14775403503";
 let currentLang = "en";
 let currentCat = "all";
@@ -87,15 +87,15 @@ function msgFor(p){
 }
 function render(){
  const grid = document.getElementById("productGrid");
- const filtered = PRODUCTS.filter(p => currentCat === "all" || p.cat_en === currentCat);
+ const filtered = PRODUCTS.filter(p => p.active !== false && (currentCat === "all" || p.cat_en === currentCat));
  document.getElementById("resultCount").textContent = `${filtered.length} products / ${filtered.length} 款商品`;
  grid.innerHTML = filtered.map(p => {
   const name = currentLang === "zh" ? p.name_zh : p.name_en;
   const cat = currentLang === "zh" ? p.cat_zh : p.cat_en;
   const text = encodeURIComponent(msgFor(p));
   return `<article class="card">
-   <div class="product-art" role="img" aria-label="${name} product image placeholder"><div class="watchface"><div class="dial"></div></div><span class="art-no">NO. ${p.id}</span></div>
-   <div class="card-info"><div class="model">${name}</div><div class="sub">${cat} · ${currentLang==="zh"?"型号":"Model"} ${p.id}</div><div class="price">US$${p.price.toFixed(2)}</div>
+   <div class="product-art" role="img" aria-label="${name}">${p.image ? `<img class="product-photo" src="${p.image}" alt="${name}" loading="lazy">` : `<div class="watchface"><div class="dial"></div></div>`}<span class="art-no">NO. ${p.id}</span></div>
+   <div class="card-info"><div class="model">${name}</div><div class="sub">${cat} · ${currentLang==="zh"?"型号":"Model"} ${p.model || p.id}</div>${(currentLang==="zh"?p.description_zh:p.description_en) ? `<div class="sub">${currentLang==="zh"?p.description_zh:p.description_en}</div>` : ""}<div class="price">US$${Number(p.price||0).toFixed(2)}</div>
    <a class="wa" href="https://wa.me/${WA_NUMBER}?text=${text}" target="_blank" rel="noopener">☏ ${currentLang==="zh"?"WhatsApp 咨询":"WhatsApp Inquiry"}</a></div></article>`;
  }).join("");
 }
@@ -111,6 +111,12 @@ document.getElementById("langBtn").addEventListener("click",()=>{
  render();
 });
 document.getElementById("year").textContent = new Date().getFullYear();
-render();
+fetch("products.json")
+ .then(response => { if (!response.ok) throw new Error("products.json not found"); return response.json(); })
+ .then(data => { PRODUCTS = data; render(); })
+ .catch(error => {
+   document.getElementById("productGrid").innerHTML = '<p style="color:#f2d99b">商品资料加载失败，请检查 products.json 文件是否已上传。</p>';
+   console.error(error);
+ });
 </script>
 </body></html>
