@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bilingual watch collection from Guangzhou, China. Worldwide shipping inquiries via WhatsApp.">
+<title>Prestige Time | Luxury Watch Collection 精品手表</title>
+<style>
+:root{--bg:#080808;--panel:#121212;--gold:#d7b36a;--gold2:#f2d99b;--muted:#b8b3a8;--line:#393329;--green:#16b86a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f7f2e8;font-family:Arial,"Noto Sans SC","Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1400px,100%);margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:#050505ee;border-bottom:1px solid #806a3c;backdrop-filter:blur(10px)}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:Georgia,serif;color:var(--gold);letter-spacing:2px;font-size:19px;font-weight:bold}.logo small{display:block;font:10px Arial,sans-serif;letter-spacing:3px;color:#ddd}
+nav{display:flex;gap:20px;align-items:center;font-size:13px;color:#eee}nav a:hover{color:var(--gold)}
+.lang{border:1px solid var(--line);background:#141414;color:var(--gold2);padding:9px 12px;border-radius:7px;cursor:pointer}
+.hero{background:radial-gradient(ellipse at 75% 45%,#65471f 0,#21180d 28%,#090909 67%);border-bottom:1px solid #6f572e}
+.hero-inner{min-height:260px;display:flex;align-items:center;justify-content:space-between;gap:30px;padding-top:30px;padding-bottom:30px}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px;text-transform:uppercase}.hero h1{font:clamp(30px,4vw,52px) Georgia,serif;line-height:1.08;margin:12px 0;color:var(--gold2)}.hero p{color:#eee;line-height:1.65;margin:7px 0}
+.hero-watch{font-size:clamp(90px,15vw,170px);filter:drop-shadow(0 0 20px #b68a39);transform:rotate(-14deg);padding:10px 30px}
+.features{display:flex;gap:18px;flex-wrap:wrap;color:#e7d8b3;font-size:13px;margin-top:22px}.features span{border-right:1px solid #665333;padding-right:18px}
+.categories{background:#eee8dc;color:#17130d}.catbar{display:flex;gap:8px;overflow:auto;padding:12px 0}.catbtn{white-space:nowrap;border:1px solid #d0c6b3;background:transparent;color:#17130d;padding:10px 14px;border-radius:5px;cursor:pointer}.catbtn.active,.catbtn:hover{background:#0a0908;color:var(--gold2);border-color:#0a0908}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;padding:28px 0 18px}.section-head h2{margin:0;font:28px Georgia,serif;color:var(--gold2)}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;padding-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);background:linear-gradient(150deg,#171512,#080808);border-radius:8px;overflow:hidden;min-width:0;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#a88a4f}
+.product-art{height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#49351b 0,#17130e 40%,#080808 75%)}
+.product-art:before{content:"";position:absolute;width:130%;height:1px;background:#c7a25b33;transform:rotate(-28deg)}
+.watchface{width:75px;height:90px;border:7px solid #b5b5b5;border-radius:22px;background:linear-gradient(135deg,#111,#050505);box-shadow:0 0 0 3px #333,0 8px 22px #000;position:relative;display:flex;align-items:center;justify-content:center}
+.watchface:before,.watchface:after{content:"";position:absolute;left:19px;right:19px;height:48px;background:linear-gradient(90deg,#4a3821,#c6a15c,#392916);z-index:0;border-radius:7px}
+.watchface:before{top:-51px}.watchface:after{bottom:-51px}
+.dial{z-index:1;width:53px;height:53px;border:2px solid #d8b86f;border-radius:50%;background:radial-gradient(circle,#17202a,#030303 70%);position:relative}
+.dial:before{content:"";position:absolute;left:24px;top:9px;width:2px;height:17px;background:#e8d39c;transform:rotate(22deg);transform-origin:bottom}
+.dial:after{content:"";position:absolute;left:25px;top:11px;width:14px;height:2px;background:#e8d39c;transform:rotate(10deg);transform-origin:left}
+.art-no{position:absolute;bottom:8px;right:10px;color:#a88a4f;font-size:10px;letter-spacing:2px}
+.card-info{padding:12px}.model{font-size:14px;font-weight:bold}.sub{font-size:11px;color:#b9b0a0;margin:5px 0}.price{color:var(--gold2);font-size:17px;font-weight:bold;margin:8px 0 10px}
+.wa{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;background:var(--green);color:white;font-weight:bold;font-size:12px;padding:10px;border-radius:5px}.wa:hover{background:#0d9b56}
+aside{border:1px solid #59482a;border-radius:8px;padding:18px;height:max-content;background:linear-gradient(160deg,#18140e,#090909)}aside h3{color:var(--gold2);font:21px Georgia,serif;margin:0 0 8px}aside p{font-size:13px;line-height:1.6;color:#ddd}.side-line{height:1px;background:#604b29;margin:16px 0}.steps{padding-left:22px;color:#ddd;font-size:13px;line-height:2}
+.contact-box{background:#063e2a;border:1px solid #158f59;border-radius:8px;padding:14px;text-align:center;margin-top:18px}.contact-box .wa{margin-top:12px}
+.notice{font-size:12px;color:#bdb5a5;line-height:1.6;border:1px dashed #4a3c25;padding:12px;border-radius:7px;margin-top:14px}
+footer{border-top:1px solid #6f572e;padding:22px 0;color:#aaa;font-size:12px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.hidden{display:none!important}
+@media(max-width:1100px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}aside .side-line{display:none}}
+@media(max-width:720px){.wrap{padding:0 13px}.nav{min-height:58px;flex-wrap:wrap;padding:10px 0}nav{order:3;width:100%;overflow:auto;padding:4px 0;gap:16px}.hero-inner{min-height:220px}.hero-watch{display:none}.hero h1{font-size:34px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-art{height:135px}.card-info{padding:10px}.section-head{align-items:start;flex-direction:column}aside{display:block}.features{gap:10px}.features span{padding-right:10px}.logo{font-size:16px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#"><span>♕ PRESTIGE TIME</span><small>LUXURY WATCHES · 精品腕表</small></a>
+<nav><a href="#home">Home 首页</a><a href="#products">All Watches 全部手表</a><a href="#shipping">Shipping 配送</a><a href="#contact">Contact 联系</a></nav>
+<button class="lang" id="langBtn" type="button">中文 / EN</button>
+</div></header>
+<section class="hero" id="home"><div class="wrap hero-inner">
+<div><div class="eyebrow" data-en="TIMELESS STYLE · WORLDWIDE SERVICE" data-zh="经典风格 · 全球服务">TIMELESS STYLE · WORLDWIDE SERVICE</div>
+<h1 data-en="LUXURY WATCH COLLECTION" data-zh="精品手表系列">LUXURY WATCH COLLECTION</h1>
+<p data-en="Find your style. Contact us directly on WhatsApp." data-zh="挑选心仪款式，通过 WhatsApp 直接咨询。">Find your style. Contact us directly on WhatsApp.</p>
+<p data-en="Ships from Guangzhou, China · Worldwide shipping inquiries welcome." data-zh="中国广州发货 · 欢迎咨询全球配送。">Ships from Guangzhou, China · Worldwide shipping inquiries welcome.</p>
+<div class="features"><span>✧ Premium Selection 优选款式</span><span>◎ Worldwide Shipping 全球配送</span><span>◉ WhatsApp Contact 在线咨询</span></div></div>
+<div class="hero-watch" aria-hidden="true">⌚</div></div></section>
+<section class="categories"><div class="wrap catbar" id="catbar">
+<button class="catbtn active" data-cat="all">All Watches 全部手表</button>
+<button class="catbtn" data-cat="Men's Watches">Men's Watches 男士</button>
+<button class="catbtn" data-cat="Women's Watches">Women's Watches 女士</button>
+<button class="catbtn" data-cat="Sports Watches">Sports Watches 运动</button>
+<button class="catbtn" data-cat="Business Watches">Business Watches 商务</button>
+<button class="catbtn" data-cat="Fashion Watches">Fashion Watches 时尚</button>
+</div></section>
+<main class="wrap">
+<div class="section-head" id="products"><div><h2 data-en="Explore the Collection" data-zh="探索腕表系列">Explore the Collection</h2><p data-en="30 styles · Prices shown in USD" data-zh="30 款精选 · 价格以美元显示">30 styles · Prices shown in USD</p></div><p id="resultCount">30 products / 30 款商品</p></div>
+<div class="layout"><section class="grid" id="productGrid" aria-label="Watch products"></section>
+<aside id="shipping"><div><h3 data-en="Worldwide Shipping" data-zh="全球配送">Worldwide Shipping</h3><p data-en="Shipping from Guangzhou, China. Please contact us to confirm destination, shipping cost and delivery time." data-zh="商品从中国广州发货。请联系客服确认目的地、运费及配送时效。">Shipping from Guangzhou, China. Please contact us to confirm destination, shipping cost and delivery time.</p>
+<div class="side-line"></div><p>✈ Fast Dispatch / 快速发货咨询<br>◇ Secure Packaging / 安全包装<br>⌖ Tracking Details / 物流追踪信息</p></div>
+<div><h3 data-en="How to Order" data-zh="购买流程">How to Order</h3><ol class="steps"><li>Choose a watch / 选择手表</li><li>Chat on WhatsApp / WhatsApp 咨询</li><li>Confirm details / 确认商品信息</li><li>Confirm shipping & payment / 确认配送和付款</li></ol>
+<div class="contact-box" id="contact"><h3 data-en="Need Help?" data-zh="需要帮助？">Need Help?</h3><p data-en="Chat with us on WhatsApp" data-zh="欢迎通过 WhatsApp 联系我们">Chat with us on WhatsApp</p><a class="wa" href="https://wa.me/14775403503?text=Hello%2C%20I%27m%20interested%20in%20your%20watch%20collection.%20%2F%20你好，我想咨询手表商品。" target="_blank" rel="noopener">☏ WhatsApp · +1 477 540 3503</a></div>
+<div class="notice" data-en="Sample catalog: product names, photos and prices are placeholders. Replace them with accurate product information before publishing. Only advertise brands and products you are authorized to sell." data-zh="样板目录：商品名称、图片及价格为示例占位内容。正式发布前请替换为真实商品资料。请仅销售有权销售的品牌和商品。">Sample catalog: product names, photos and prices are placeholders. Replace them with accurate product information before publishing. Only advertise brands and products you are authorized to sell.</div></div></aside></div>
+</main>
+<footer><div class="wrap foot"><span>♕ PRESTIGE TIME · 精品腕表</span><span>Guangzhou, China · Worldwide Shipping / 中国广州 · 全球配送</span><span>© <span id="year"></span> Prestige Time · Demo catalog</span></div></footer>
+<script>
+const PRODUCTS = [{"id": "001", "name_en": "Classic Watch 001", "name_zh": "精品腕表 001", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 199}, {"id": "002", "name_en": "Classic Watch 002", "name_zh": "精品腕表 002", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 229}, {"id": "003", "name_en": "Classic Watch 003", "name_zh": "精品腕表 003", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 259}, {"id": "004", "name_en": "Classic Watch 004", "name_zh": "精品腕表 004", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 219}, {"id": "005", "name_en": "Classic Watch 005", "name_zh": "精品腕表 005", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 239}, {"id": "006", "name_en": "Classic Watch 006", "name_zh": "精品腕表 006", "cat_en": "Men's Watches", "cat_zh": "男士手表", "price": 279}, {"id": "007", "name_en": "Classic Watch 007", "name_zh": "精品腕表 007", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 189}, {"id": "008", "name_en": "Classic Watch 008", "name_zh": "精品腕表 008", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 219}, {"id": "009", "name_en": "Classic Watch 009", "name_zh": "精品腕表 009", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 249}, {"id": "010", "name_en": "Classic Watch 010", "name_zh": "精品腕表 010", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 279}, {"id": "011", "name_en": "Classic Watch 011", "name_zh": "精品腕表 011", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 229}, {"id": "012", "name_en": "Classic Watch 012", "name_zh": "精品腕表 012", "cat_en": "Women's Watches", "cat_zh": "女士手表", "price": 259}, {"id": "013", "name_en": "Classic Watch 013", "name_zh": "精品腕表 013", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 229}, {"id": "014", "name_en": "Classic Watch 014", "name_zh": "精品腕表 014", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 259}, {"id": "015", "name_en": "Classic Watch 015", "name_zh": "精品腕表 015", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 289}, {"id": "016", "name_en": "Classic Watch 016", "name_zh": "精品腕表 016", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 239}, {"id": "017", "name_en": "Classic Watch 017", "name_zh": "精品腕表 017", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 269}, {"id": "018", "name_en": "Classic Watch 018", "name_zh": "精品腕表 018", "cat_en": "Sports Watches", "cat_zh": "运动手表", "price": 299}, {"id": "019", "name_en": "Classic Watch 019", "name_zh": "精品腕表 019", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 209}, {"id": "020", "name_en": "Classic Watch 020", "name_zh": "精品腕表 020", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 209}, {"id": "021", "name_en": "Classic Watch 021", "name_zh": "精品腕表 021", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 239}, {"id": "022", "name_en": "Classic Watch 022", "name_zh": "精品腕表 022", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 279}, {"id": "023", "name_en": "Classic Watch 023", "name_zh": "精品腕表 023", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 259}, {"id": "024", "name_en": "Classic Watch 024", "name_zh": "精品腕表 024", "cat_en": "Business Watches", "cat_zh": "商务手表", "price": 259}, {"id": "025", "name_en": "Classic Watch 025", "name_zh": "精品腕表 025", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 179}, {"id": "026", "name_en": "Classic Watch 026", "name_zh": "精品腕表 026", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 209}, {"id": "027", "name_en": "Classic Watch 027", "name_zh": "精品腕表 027", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 239}, {"id": "028", "name_en": "Classic Watch 028", "name_zh": "精品腕表 028", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 279}, {"id": "029", "name_en": "Classic Watch 029", "name_zh": "精品腕表 029", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 229}, {"id": "030", "name_en": "Classic Watch 030", "name_zh": "精品腕表 030", "cat_en": "Fashion Watches", "cat_zh": "时尚手表", "price": 259}];
+const WA_NUMBER = "14775403503";
+let currentLang = "en";
+let currentCat = "all";
+function msgFor(p){
+ const en = `Hello, I'm interested in ${p.name_en} (${p.id}), listed at US$${p.price}. Please confirm availability and worldwide shipping.`;
+ const zh = `你好，我想咨询${p.name_zh}（型号 ${p.id}），标价 US$${p.price}。请确认库存和配送信息。`;
+ return currentLang === "zh" ? zh : en;
+}
+function render(){
+ const grid = document.getElementById("productGrid");
+ const filtered = PRODUCTS.filter(p => currentCat === "all" || p.cat_en === currentCat);
+ document.getElementById("resultCount").textContent = `${filtered.length} products / ${filtered.length} 款商品`;
+ grid.innerHTML = filtered.map(p => {
+  const name = currentLang === "zh" ? p.name_zh : p.name_en;
+  const cat = currentLang === "zh" ? p.cat_zh : p.cat_en;
+  const text = encodeURIComponent(msgFor(p));
+  return `<article class="card">
+   <div class="product-art" role="img" aria-label="${name} product image placeholder"><div class="watchface"><div class="dial"></div></div><span class="art-no">NO. ${p.id}</span></div>
+   <div class="card-info"><div class="model">${name}</div><div class="sub">${cat} · ${currentLang==="zh"?"型号":"Model"} ${p.id}</div><div class="price">US$${p.price.toFixed(2)}</div>
+   <a class="wa" href="https://wa.me/${WA_NUMBER}?text=${text}" target="_blank" rel="noopener">☏ ${currentLang==="zh"?"WhatsApp 咨询":"WhatsApp Inquiry"}</a></div></article>`;
+ }).join("");
+}
+document.querySelectorAll(".catbtn").forEach(btn => btn.addEventListener("click",()=>{
+ currentCat = btn.dataset.cat;
+ document.querySelectorAll(".catbtn").forEach(b=>b.classList.toggle("active",b===btn));
+ render();
+}));
+document.getElementById("langBtn").addEventListener("click",()=>{
+ currentLang = currentLang === "en" ? "zh" : "en";
+ document.documentElement.lang = currentLang;
+ document.querySelectorAll("[data-en][data-zh]").forEach(el=>el.textContent = el.dataset[currentLang]);
+ render();
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+render();
+</script>
+</body></html>
