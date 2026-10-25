@@ -51,7 +51,7 @@ footer{border-top:1px solid #4d3f22;padding:24px 0 80px;color:#999;font-size:12p
 <div class="features"><span>✧ Premium Selection 优选款式</span><span>◎ Worldwide Shipping 全球配送</span><span>◉ WhatsApp 在线咨询</span></div></div><div class="hero-watch" aria-hidden="true">⌚</div></div></section>
 <section class="categories"><div class="catbar" id="catbar"><button class="catbtn active" data-cat="all">All 全部</button></div></section>
 <main class="wrap"><div class="section-head" id="products"><div><h2 class="gt" data-en="Explore the Collection" data-zh="探索腕表系列">Explore the Collection</h2><p id="styleCount"></p></div><p id="resultCount"></p></div>
-<div class="tools"><input id="q" type="search" placeholder="Search name or model 搜索名称或型号"><input id="min" type="number" min="0" placeholder="Min US$"><input id="max" type="number" min="0" placeholder="Max US$"><select id="sort"><option value="">Default 默认排序</option><option value="asc">Price ↑ 价格从低到高</option><option value="desc">Price ↓ 价格从高到低</option></select></div>
+<div class="tools"><input id="q" type="search" placeholder="Search name or model 搜索名称或型号"></div>
 <div class="favbar hidden" id="favbar"><span id="favText"></span><a class="wa" id="favWa" target="_blank" rel="noopener"></a></div>
 <div class="layout"><section class="grid" id="grid"></section>
 <aside id="shipping"><div><h3 class="gt" data-en="Worldwide Shipping" data-zh="全球配送">Worldwide Shipping</h3><p data-en="Shipping from Guangzhou, China. Please contact us to confirm destination, shipping cost and delivery time." data-zh="商品从中国广州发货。请联系客服确认目的地、运费及配送时效。">Shipping from Guangzhou, China. Please contact us to confirm destination, shipping cost and delivery time.</p><div class="sl"></div><p>✈ Fast Dispatch / 快速发货咨询<br>◇ Secure Packaging / 安全包装<br>⌖ Tracking Details / 物流追踪信息</p></div>
@@ -67,33 +67,33 @@ let P=[],loaded=false,failed=false,lang="en",cat="all",favOnly=false,favs=new Se
 try{lang=localStorage.getItem("lang")==="zh"?"zh":"en";favs=new Set(JSON.parse(localStorage.getItem("favs")||"[]"))}catch(e){}
 const L=(a,b)=>lang==="zh"?b:a,nm=p=>L(p.name_en,p.name_zh),ct=p=>L(p.cat_en,p.cat_zh),ds=p=>L(p.description_en,p.description_zh)||"";
 const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
-const inq=p=>L(`Hello, I'm interested in ${p.name_en} (${p.model||p.id}), US$${p.price}. Please confirm availability and worldwide shipping.`,`你好，我想咨询${p.name_zh}（型号 ${p.model||p.id}），标价 US$${p.price}。请确认库存和配送信息。`);
+const inq=p=>L(`Hello, I'm interested in ${p.name_en} (${p.model||p.id}). Please tell me more about this watch.`,`你好，我想咨询${p.name_zh}（型号 ${p.model||p.id}）。请介绍一下这款手表。`);
 const pr=p=>"US$"+Number(p.price||0).toFixed(2),fv=p=>favs.has(String(p.id));
 function saveFavs(){try{localStorage.setItem("favs",JSON.stringify([...favs]))}catch(e){}$("favCount").textContent=favs.size}
-function list(){const q=$("q").value.trim().toLowerCase(),mn=parseFloat($("min").value),mx=parseFloat($("max").value),s=$("sort").value;
-const l=P.filter(p=>p.active!==false&&(cat==="all"||p.cat_en===cat)&&(!favOnly||fv(p))&&(!q||[p.id,p.model,p.name_en,p.name_zh].join(" ").toLowerCase().includes(q))&&(isNaN(mn)||p.price>=mn)&&(isNaN(mx)||p.price<=mx));
-if(s)l.sort((a,b)=>s==="asc"?a.price-b.price:b.price-a.price);return l}
+function list(){const q=$("q").value.trim().toLowerCase();
+const l=P.filter(p=>p.active!==false&&(cat==="all"||p.cat_en===cat)&&(!favOnly||fv(p))&&(!q||[p.id,p.model,p.name_en,p.name_zh].join(" ").toLowerCase().includes(q))));
+return l}
 function render(){const g=$("grid");
 if(failed){g.innerHTML='<p class="empty">商品资料加载失败，请刷新页面重试。<br>Failed to load products. Please refresh.</p>';return}
 if(!loaded){g.innerHTML='<p class="empty">Loading… 加载中…</p>';return}
 const all=P.filter(p=>p.active!==false);const cm=new Map();all.forEach(p=>{if(p.cat_en&&!cm.has(p.cat_en))cm.set(p.cat_en,p.cat_zh||p.cat_en)});if(cat!=="all"&&!cm.has(cat))cat="all";
 $("catbar").innerHTML=`<button class="catbtn ${cat==="all"?"active":""}" data-cat="all">All 全部</button>`+[...cm].map(([en,zh])=>`<button class="catbtn ${en===cat?"active":""}" data-cat="${esc(en)}">${esc(en)} ${esc(zh)}</button>`).join("");
 const l=list();
-$("styleCount").textContent=L(`${all.length} styles · Prices shown in USD`,`${all.length} 款精选 · 价格以美元显示`);$("resultCount").textContent=`${l.length} products / ${l.length} 款商品`;
+$("styleCount").textContent=L(`${all.length} styles`,`${all.length} 款精选`);$("resultCount").textContent=`${l.length} products / ${l.length} 款商品`;
 $("favBtn").classList.toggle("on",favOnly);$("favbar").classList.toggle("hidden",!favOnly);
 if(favOnly){const f=all.filter(fv);$("favText").textContent=L(`♥ ${f.length} saved watches`,`♥ 已收藏 ${f.length} 款手表`);$("favWa").textContent="☏ "+L("Send my list on WhatsApp","把收藏清单发到 WhatsApp");
-$("favWa").href=wa(L("Hello, I'm interested in these watches:\n","你好，我对以下手表感兴趣：\n")+f.map(p=>`• ${nm(p)} (${p.model||p.id}) ${pr(p)}`).join("\n"));$("favWa").classList.toggle("hidden",!f.length)}
+$("favWa").href=wa(L("Hello, I'm interested in these watches:\n","你好，我对以下手表感兴趣：\n")+f.map(p=>`• ${nm(p)} (${p.model||p.id})`).join("\n"));$("favWa").classList.toggle("hidden",!f.length)}
 g.innerHTML=l.map(p=>`<article class="card" data-id="${esc(p.id)}"><div class="art">${p.image?`<img src="${esc(p.image)}" alt="${esc(nm(p))}" loading="lazy">`:'<div class="watchface"><div class="dial"></div></div>'}<button class="heart ${fv(p)?"on":""}" data-fav="${esc(p.id)}" aria-label="Favorite">${fv(p)?"♥":"♡"}</button><span class="art-no">NO. ${esc(p.id)}</span></div>
-<div class="info"><div class="model">${esc(nm(p))}</div><div class="sub">${esc(ct(p))} · ${L("Model","型号")} ${esc(p.model||p.id)}</div><div class="price">${pr(p)}</div><a class="wa" href="${wa(inq(p))}" target="_blank" rel="noopener">☏ ${L("WhatsApp Inquiry","WhatsApp 咨询")}</a></div></article>`).join("")||`<p class="empty">${L("No products found.","没有找到符合条件的商品。")}</p>`}
+<div class="info"><div class="model">${esc(nm(p))}</div><div class="sub">${esc(ct(p))} · ${L("Model","型号")} ${esc(p.model||p.id)}</div><a class="wa" href="${wa(inq(p))}" target="_blank" rel="noopener">☏ ${L("WhatsApp Inquiry","WhatsApp 咨询")}</a></div></article>`).join("")||`<p class="empty">${L("No products found.","没有找到符合条件的商品。")}</p>`}
 function toggleFav(id){id=String(id);favs.has(id)?favs.delete(id):favs.add(id);saveFavs();render();if(!$("md").classList.contains("hidden"))openP(id,true)}
 function openP(id,keep){const p=P.find(x=>String(x.id)===String(id));if(!p)return;
-$("mbox").innerHTML=`<button class="mx" data-close>✕</button>${p.image?`<img src="${esc(p.image)}" alt="${esc(nm(p))}">`:'<div class="mph"></div>'}<div class="mbody"><div class="sub">${esc(ct(p))} · ${L("Model","型号")} ${esc(p.model||p.id)} · NO. ${esc(p.id)}</div><h3 class="gt">${esc(nm(p))}</h3><div class="price">${pr(p)}</div><p>${esc(ds(p))||L("Contact us for more details, photos and availability.","如需更多细节、实拍图和库存，请联系我们。")}</p>
+$("mbox").innerHTML=`<button class="mx" data-close>✕</button>${p.image?`<img src="${esc(p.image)}" alt="${esc(nm(p))}">`:'<div class="mph"></div>'}<div class="mbody"><div class="sub">${esc(ct(p))} · ${L("Model","型号")} ${esc(p.model||p.id)} · NO. ${esc(p.id)}</div><h3 class="gt">${esc(nm(p))}</h3><p>${esc(ds(p))||L("Contact us for more details, photos and availability.","如需更多细节、实拍图和库存，请联系我们。")}</p>
 <div class="mbtn"><a class="wa" href="${wa(inq(p))}" target="_blank" rel="noopener">☏ ${L("WhatsApp Inquiry","WhatsApp 咨询")}</a><button class="pill" data-fav="${esc(p.id)}">${fv(p)?"♥ "+L("Saved","已收藏"):"♡ "+L("Save","收藏")}</button><button class="pill" data-copy="${esc(p.id)}">🔗 ${L("Copy link","复制链接")}</button></div></div>`;
 $("md").classList.remove("hidden");if(!keep)history.replaceState(null,"","#p="+encodeURIComponent(p.id))}
 function closeP(){$("md").classList.add("hidden");history.replaceState(null,"",location.pathname+location.search)}
 function applyLang(){document.documentElement.lang=lang;document.querySelectorAll("[data-en][data-zh]").forEach(e=>e.textContent=e.dataset[lang]);render()}
 $("catbar").addEventListener("click",e=>{const b=e.target.closest(".catbtn");if(!b)return;cat=b.dataset.cat;render()});
-["q","min","max"].forEach(i=>$(i).addEventListener("input",render));$("sort").addEventListener("change",render);
+$("q").addEventListener("input",render);
 $("langBtn").onclick=()=>{lang=lang==="zh"?"en":"zh";try{localStorage.setItem("lang",lang)}catch(e){}applyLang();if(!$("md").classList.contains("hidden"))openP(new URLSearchParams(location.hash.slice(1)).get("p"),true)};
 $("favBtn").onclick=()=>{favOnly=!favOnly;render();$("products").scrollIntoView({behavior:"smooth"})};
 $("grid").addEventListener("click",e=>{if(e.target.closest("a.wa"))return;const h=e.target.closest("[data-fav]");if(h){e.stopPropagation();return toggleFav(h.dataset.fav)}const c=e.target.closest(".card");if(c)openP(c.dataset.id)});
