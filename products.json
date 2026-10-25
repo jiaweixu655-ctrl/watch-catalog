@@ -9,7 +9,7 @@
     "model": "116503-0004",
     "description_en": "Steel & yellow gold · Black dial · Yellow gold bezel · Metal bracelet",
     "description_zh": "钢金（金钢）· 黑色表盘 · 黄金外圈 · 金属表带",
-    "image": "images/daytona-116503-0004.jpg",
+    "image": "daytona-116503-0004.jpg",
     "active": true
   },
   {
@@ -22,7 +22,7 @@
     "model": "116503-0008",
     "description_en": "Steel & yellow gold · Black dial with diamond indices · Yellow gold bezel · Metal bracelet",
     "description_zh": "钢金（金钢）· 黑色镶钻时标表盘 · 黄金外圈 · 金属表带",
-    "image": "images/daytona-116503-0008.jpg",
+    "image": "daytona-116503-0008.jpg",
     "active": true
   },
   {
@@ -35,7 +35,7 @@
     "model": "116506-0001",
     "description_en": "Platinum · Ice-blue dial · Brown ceramic bezel · Metal bracelet",
     "description_zh": "铂金 · 冰蓝色表盘 · 棕色陶瓷圈 · 金属表带",
-    "image": "images/daytona-116506-0001.jpg",
+    "image": "daytona-116506-0001.jpg",
     "active": true
   },
   {
@@ -48,7 +48,7 @@
     "model": "116508-0013",
     "description_en": "18K yellow gold · Green dial · Yellow gold bezel · Metal bracelet",
     "description_zh": "18K 黄金 · 绿色表盘（绿金迪）· 黄金外圈 · 金属表带",
-    "image": "images/daytona-116508-0013.jpg",
+    "image": "daytona-116508-0013.jpg",
     "active": true
   },
   {
@@ -61,7 +61,7 @@
     "model": "116518LN-0048",
     "description_en": "18K yellow gold · Champagne dial · Black ceramic bezel · Rubber strap",
     "description_zh": "18K 黄金 · 香槟色表盘 · 黑色陶瓷圈 · 橡胶表带",
-    "image": "images/daytona-116518ln-0048.jpg",
+    "image": "daytona-116518ln-0048.jpg",
     "active": true
   },
   {
@@ -74,7 +74,7 @@
     "model": "116519LN-0027",
     "description_en": "White gold · Steel-grey dial · Black ceramic bezel · Rubber strap",
     "description_zh": "白金 · 钢灰色表盘 · 黑色陶瓷圈 · 橡胶表带",
-    "image": "images/daytona-116519ln-0027.jpg",
+    "image": "daytona-116519ln-0027.jpg",
     "active": true
   },
   {
@@ -87,7 +87,7 @@
     "model": "116519LN-0038",
     "description_en": "White gold · Meteorite dial · Black ceramic bezel · Rubber strap",
     "description_zh": "白金 · 陨石表盘（陨石迪）· 黑色陶瓷圈 · 橡胶表带",
-    "image": "images/daytona-116519ln-0038.jpg",
+    "image": "daytona-116519ln-0038.jpg",
     "active": true
   },
   {
@@ -100,7 +100,7 @@
     "model": "126502-0001",
     "description_en": "White dial · Black ceramic bezel · Metal bracelet",
     "description_zh": "白色表盘 · 黑色陶瓷圈 · 金属表带",
-    "image": "images/daytona-126502-0001.jpg",
+    "image": "daytona-126502-0001.jpg",
     "active": true
   },
   {
@@ -113,7 +113,7 @@
     "model": "126505-0005",
     "description_en": "18K rose gold · Chocolate dial · Rose gold bezel · Metal bracelet",
     "description_zh": "18K 玫瑰金 · 巧克力色表盘 · 玫瑰金外圈 · 金属表带",
-    "image": "images/daytona-126505-0005.jpg",
+    "image": "daytona-126505-0005.jpg",
     "active": true
   },
   {
@@ -126,7 +126,7 @@
     "model": "126508-0008",
     "description_en": "18K yellow gold · Green dial with gold sub-dials · Yellow gold bezel · Metal bracelet",
     "description_zh": "18K 黄金 · 绿色表盘配金色小表盘 · 黄金外圈 · 金属表带",
-    "image": "images/daytona-126508-0008.jpg",
+    "image": "daytona-126508-0008.jpg",
     "active": true
   },
   {
@@ -139,7 +139,7 @@
     "model": "126519LN-0002",
     "description_en": "White gold · Black dial with silver sub-dials · Black ceramic bezel · Rubber strap",
     "description_zh": "白金 · 黑色表盘配银色小表盘 · 黑色陶瓷圈 · 橡胶表带",
-    "image": "images/daytona-126519ln-0002.jpg",
+    "image": "daytona-126519ln-0002.jpg",
     "active": true
   }
 ]
