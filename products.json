@@ -505,5 +505,18 @@
     "description_zh": "18K 白金 · 蓝色渐变镶钻表盘 · 白金凹槽外圈 · 总统型表带",
     "image": "daydate-128239-0023.jpg",
     "active": true
+  },
+  {
+    "id": "040",
+    "price": 0,
+    "name_en": "Rolex GMT-Master II",
+    "name_zh": "Rolex GMT-Master II",
+    "cat_en": "Rolex GMT-Master II",
+    "cat_zh": "Rolex GMT-Master II",
+    "model": "",
+    "description_en": "",
+    "description_zh": "",
+    "image": "",
+    "active": true
   }
 ]
