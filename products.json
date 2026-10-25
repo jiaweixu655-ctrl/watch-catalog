@@ -14,14 +14,16 @@
   },
   {
     "id": "002",
+    "price": 229,
     "name_en": "Classic Watch 002",
     "name_zh": "精品腕表 002",
     "cat_en": "Men's Watches",
     "cat_zh": "男士手表",
-    "price": 229,
-    "active": true,
+    "model": "",
     "description_en": "",
-    "description_zh": ""
+    "description_zh": "",
+    "image": "images/watch-002.jpg",
+    "active": true
   },
   {
     "id": "003",
