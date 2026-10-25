@@ -258,5 +258,18 @@
     "description_zh": "不锈钢 · 黑色表盘 · 黑色陶瓷圈 · 金属表带",
     "image": "daytona-116500ln-0002.jpg",
     "active": true
+  },
+  {
+    "id": "021",
+    "price": 0,
+    "name_en": "Daytona Series 126519LN-0006",
+    "name_zh": "迪通拿系列 126519LN-0006",
+    "cat_en": "Men's Watches",
+    "cat_zh": "男士手表",
+    "model": "126519LN-0006",
+    "description_en": "White gold · Steel-grey dial with black sub-dials · Black ceramic bezel · Rubber strap",
+    "description_zh": "白金 · 钢灰色表盘配黑色计时盘 · 黑色陶瓷圈 · 橡胶表带",
+    "image": "daytona-126519ln-0006.jpg",
+    "active": true
   }
 ]
