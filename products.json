@@ -271,5 +271,18 @@
     "description_zh": "白金 · 钢灰色表盘配黑色计时盘 · 黑色陶瓷圈 · 橡胶表带",
     "image": "daytona-126519ln-0006.jpg",
     "active": true
+  },
+  {
+    "id": "022",
+    "price": 0,
+    "name_en": "Rolex Datejust",
+    "name_zh": "日志",
+    "cat_en": "Rolex Datejust",
+    "cat_zh": "Rolex Datejust",
+    "model": "",
+    "description_en": "Rolex Datejust",
+    "description_zh": "",
+    "image": "",
+    "active": true
   }
 ]
