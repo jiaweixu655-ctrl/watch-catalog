@@ -19,29 +19,33 @@ nav{display:flex;gap:20px;align-items:center;font-size:13px;color:#eee}nav a:hov
 .eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px;text-transform:uppercase}.hero h1{font:clamp(30px,4vw,52px) Georgia,serif;line-height:1.08;margin:12px 0;color:var(--gold2)}.hero p{color:#eee;line-height:1.65;margin:7px 0}
 .hero-watch{font-size:clamp(90px,15vw,170px);filter:drop-shadow(0 0 20px #b68a39);transform:rotate(-14deg);padding:10px 30px}
 .features{display:flex;gap:18px;flex-wrap:wrap;color:#e7d8b3;font-size:13px;margin-top:22px}.features span{border-right:1px solid #665333;padding-right:18px}
-.categories{background:#eee8dc;color:#17130d}.catbar{display:flex;gap:8px;overflow:auto;padding:12px 0}.catbtn{white-space:nowrap;border:1px solid #d0c6b3;background:transparent;color:#17130d;padding:10px 14px;border-radius:5px;cursor:pointer}.catbtn.active,.catbtn:hover{background:#0a0908;color:var(--gold2);border-color:#0a0908}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;padding:28px 0 18px}.section-head h2{margin:0;font:28px Georgia,serif;color:var(--gold2)}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.categories{background:#eee8dc;color:#17130d;position:sticky;top:68px;z-index:4}.catbar{display:flex;gap:8px;overflow:auto;padding:12px 0}.catbtn{white-space:nowrap;border:1px solid #d0c6b3;background:transparent;color:#17130d;padding:10px 14px;border-radius:5px;cursor:pointer}.catbtn.active,.catbtn:hover{background:#0a0908;color:var(--gold2);border-color:#0a0908}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;padding:28px 0 12px}.section-head h2{margin:0;font:28px Georgia,serif;color:var(--gold2)}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;padding-bottom:16px}.tools input,.tools select{background:#121212;border:1px solid #4a3f2a;color:#fff;border-radius:7px;padding:11px 12px;font:inherit;font-size:14px}.tools input{flex:1;min-width:200px}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;padding-bottom:34px}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-content:start}
+.empty{grid-column:1/-1;color:var(--gold2);padding:30px 0;text-align:center}
 .card{border:1px solid var(--line);background:linear-gradient(150deg,#171512,#080808);border-radius:8px;overflow:hidden;min-width:0;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#a88a4f}
 .product-art{height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#49351b 0,#17130e 40%,#080808 75%)}
 .product-art:before{content:"";position:absolute;width:130%;height:1px;background:#c7a25b33;transform:rotate(-28deg)}
-.product-photo{width:100%;height:100%;object-fit:contain;background:#fff;position:absolute;inset:0}.watchface{width:75px;height:90px;border:7px solid #b5b5b5;border-radius:22px;background:linear-gradient(135deg,#111,#050505);box-shadow:0 0 0 3px #333,0 8px 22px #000;position:relative;display:flex;align-items:center;justify-content:center}
+.product-photo{width:100%;height:100%;object-fit:contain;background:#fff;position:absolute;inset:0;cursor:zoom-in}.watchface{width:75px;height:90px;border:7px solid #b5b5b5;border-radius:22px;background:linear-gradient(135deg,#111,#050505);box-shadow:0 0 0 3px #333,0 8px 22px #000;position:relative;display:flex;align-items:center;justify-content:center}
 .watchface:before,.watchface:after{content:"";position:absolute;left:19px;right:19px;height:48px;background:linear-gradient(90deg,#4a3821,#c6a15c,#392916);z-index:0;border-radius:7px}
 .watchface:before{top:-51px}.watchface:after{bottom:-51px}
 .dial{z-index:1;width:53px;height:53px;border:2px solid #d8b86f;border-radius:50%;background:radial-gradient(circle,#17202a,#030303 70%);position:relative}
 .dial:before{content:"";position:absolute;left:24px;top:9px;width:2px;height:17px;background:#e8d39c;transform:rotate(22deg);transform-origin:bottom}
 .dial:after{content:"";position:absolute;left:25px;top:11px;width:14px;height:2px;background:#e8d39c;transform:rotate(10deg);transform-origin:left}
-.art-no{position:absolute;bottom:8px;right:10px;color:#a88a4f;font-size:10px;letter-spacing:2px}
+.art-no{position:absolute;bottom:8px;right:10px;color:#a88a4f;font-size:10px;letter-spacing:2px;pointer-events:none}
 .card-info{padding:12px}.model{font-size:14px;font-weight:bold}.sub{font-size:11px;color:#b9b0a0;margin:5px 0}.price{color:var(--gold2);font-size:17px;font-weight:bold;margin:8px 0 10px}
 .wa{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;background:var(--green);color:white;font-weight:bold;font-size:12px;padding:10px;border-radius:5px}.wa:hover{background:#0d9b56}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:6;width:auto;padding:13px 18px;border-radius:30px;font-size:13px;box-shadow:0 4px 18px #000a}
 aside{border:1px solid #59482a;border-radius:8px;padding:18px;height:max-content;background:linear-gradient(160deg,#18140e,#090909)}aside h3{color:var(--gold2);font:21px Georgia,serif;margin:0 0 8px}aside p{font-size:13px;line-height:1.6;color:#ddd}.side-line{height:1px;background:#604b29;margin:16px 0}.steps{padding-left:22px;color:#ddd;font-size:13px;line-height:2}
 .contact-box{background:#063e2a;border:1px solid #158f59;border-radius:8px;padding:14px;text-align:center;margin-top:18px}.contact-box .wa{margin-top:12px}
 .notice{font-size:12px;color:#bdb5a5;line-height:1.6;border:1px dashed #4a3c25;padding:12px;border-radius:7px;margin-top:14px}
-footer{border-top:1px solid #6f572e;padding:22px 0;color:#aaa;font-size:12px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer{border-top:1px solid #6f572e;padding:22px 0 70px;color:#aaa;font-size:12px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+#lb{position:fixed;inset:0;z-index:20;background:#000d;display:flex;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}#lb img{max-width:100%;max-height:100%;background:#fff;border-radius:8px}
 .hidden{display:none!important}
 @media(max-width:1100px){.layout{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}aside .side-line{display:none}}
-@media(max-width:720px){.wrap{padding:0 13px}.nav{min-height:58px;flex-wrap:wrap;padding:10px 0}nav{order:3;width:100%;overflow:auto;padding:4px 0;gap:16px}.hero-inner{min-height:220px}.hero-watch{display:none}.hero h1{font-size:34px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-art{height:135px}.card-info{padding:10px}.section-head{align-items:start;flex-direction:column}aside{display:block}.features{gap:10px}.features span{padding-right:10px}.logo{font-size:16px}}
+@media(max-width:720px){.wrap{padding:0 13px}.nav{min-height:58px;flex-wrap:wrap;padding:10px 0}nav{order:3;width:100%;overflow:auto;padding:4px 0;gap:16px}.categories{top:0;position:static}.hero-inner{min-height:220px}.hero-watch{display:none}.hero h1{font-size:34px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-art{height:135px}.card-info{padding:10px}.section-head{align-items:start;flex-direction:column}aside{display:block}.features{gap:10px}.features span{padding-right:10px}.logo{font-size:16px}}
 </style>
 </head>
 <body>
@@ -66,7 +70,8 @@ footer{border-top:1px solid #6f572e;padding:22px 0;color:#aaa;font-size:12px}.fo
 <button class="catbtn" data-cat="Fashion Watches">Fashion Watches 时尚</button>
 </div></section>
 <main class="wrap">
-<div class="section-head" id="products"><div><h2 data-en="Explore the Collection" data-zh="探索腕表系列">Explore the Collection</h2><p data-en="30 styles · Prices shown in USD" data-zh="30 款精选 · 价格以美元显示">30 styles · Prices shown in USD</p></div><p id="resultCount">30 products / 30 款商品</p></div>
+<div class="section-head" id="products"><div><h2 data-en="Explore the Collection" data-zh="探索腕表系列">Explore the Collection</h2><p id="styleCount"></p></div><p id="resultCount"></p></div>
+<div class="tools"><input id="q" type="search" placeholder="Search name or model 搜索名称或型号" aria-label="Search"><select id="sort" aria-label="Sort"><option value="">Default 默认排序</option><option value="asc">Price: Low → High 价格从低到高</option><option value="desc">Price: High → Low 价格从高到低</option></select></div>
 <div class="layout"><section class="grid" id="productGrid" aria-label="Watch products"></section>
 <aside id="shipping"><div><h3 data-en="Worldwide Shipping" data-zh="全球配送">Worldwide Shipping</h3><p data-en="Shipping from Guangzhou, China. Please contact us to confirm destination, shipping cost and delivery time." data-zh="商品从中国广州发货。请联系客服确认目的地、运费及配送时效。">Shipping from Guangzhou, China. Please contact us to confirm destination, shipping cost and delivery time.</p>
 <div class="side-line"></div><p>✈ Fast Dispatch / 快速发货咨询<br>◇ Secure Packaging / 安全包装<br>⌖ Tracking Details / 物流追踪信息</p></div>
@@ -75,48 +80,71 @@ footer{border-top:1px solid #6f572e;padding:22px 0;color:#aaa;font-size:12px}.fo
 <div class="notice" data-en="Sample catalog: product names, photos and prices are placeholders. Replace them with accurate product information before publishing. Only advertise brands and products you are authorized to sell." data-zh="样板目录：商品名称、图片及价格为示例占位内容。正式发布前请替换为真实商品资料。请仅销售有权销售的品牌和商品。">Sample catalog: product names, photos and prices are placeholders. Replace them with accurate product information before publishing. Only advertise brands and products you are authorized to sell.</div></div></aside></div>
 </main>
 <footer><div class="wrap foot"><span>♕ PRESTIGE TIME · 精品腕表</span><span>Guangzhou, China · Worldwide Shipping / 中国广州 · 全球配送</span><span>© <span id="year"></span> Prestige Time · Demo catalog</span></div></footer>
+<a class="wa wa-float" href="https://wa.me/14775403503?text=Hello%2C%20I%27m%20interested%20in%20your%20watch%20collection." target="_blank" rel="noopener">☏ WhatsApp</a>
+<div id="lb" class="hidden"><img alt=""></div>
 <script>
-let PRODUCTS = [];
+let PRODUCTS = [], loaded = false, failed = false;
 const WA_NUMBER = "14775403503";
-let currentLang = "en";
-let currentCat = "all";
+let currentLang = "en", currentCat = "all";
+try { currentLang = localStorage.getItem("lang") === "zh" ? "zh" : "en"; } catch (e) {}
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const zh = () => currentLang === "zh";
 function msgFor(p){
- const en = `Hello, I'm interested in ${p.name_en} (${p.id}), listed at US$${p.price}. Please confirm availability and worldwide shipping.`;
- const zh = `你好，我想咨询${p.name_zh}（型号 ${p.id}），标价 US$${p.price}。请确认库存和配送信息。`;
- return currentLang === "zh" ? zh : en;
+ return zh()
+  ? `你好，我想咨询${p.name_zh}（型号 ${p.model || p.id}），标价 US$${p.price}。请确认库存和配送信息。`
+  : `Hello, I'm interested in ${p.name_en} (${p.model || p.id}), listed at US$${p.price}. Please confirm availability and worldwide shipping.`;
 }
 function render(){
- const grid = document.getElementById("productGrid");
- const filtered = PRODUCTS.filter(p => p.active !== false && (currentCat === "all" || p.cat_en === currentCat));
- document.getElementById("resultCount").textContent = `${filtered.length} products / ${filtered.length} 款商品`;
- grid.innerHTML = filtered.map(p => {
-  const name = currentLang === "zh" ? p.name_zh : p.name_en;
-  const cat = currentLang === "zh" ? p.cat_zh : p.cat_en;
+ const grid = $("productGrid");
+ if (failed) { grid.innerHTML = '<p class="empty">商品资料加载失败，请刷新页面重试。<br>Failed to load products. Please refresh.</p>'; return; }
+ if (!loaded) { grid.innerHTML = '<p class="empty">Loading… 加载中…</p>'; return; }
+ const active = PRODUCTS.filter(p => p.active !== false);
+ const q = $("q").value.trim().toLowerCase(), sort = $("sort").value;
+ let list = active.filter(p => (currentCat === "all" || p.cat_en === currentCat) &&
+  (!q || [p.id, p.model, p.name_en, p.name_zh].join(" ").toLowerCase().includes(q)));
+ if (sort) list = [...list].sort((a, b) => sort === "asc" ? a.price - b.price : b.price - a.price);
+ $("styleCount").textContent = zh() ? `${active.length} 款精选 · 价格以美元显示` : `${active.length} styles · Prices shown in USD`;
+ $("resultCount").textContent = `${list.length} products / ${list.length} 款商品`;
+ grid.innerHTML = list.map(p => {
+  const name = esc(zh() ? p.name_zh : p.name_en), cat = esc(zh() ? p.cat_zh : p.cat_en);
+  const desc = esc(zh() ? p.description_zh : p.description_en);
   const text = encodeURIComponent(msgFor(p));
   return `<article class="card">
-   <div class="product-art" role="img" aria-label="${name}">${p.image ? `<img class="product-photo" src="${p.image}" alt="${name}" loading="lazy">` : `<div class="watchface"><div class="dial"></div></div>`}<span class="art-no">NO. ${p.id}</span></div>
-   <div class="card-info"><div class="model">${name}</div><div class="sub">${cat} · ${currentLang==="zh"?"型号":"Model"} ${p.model || p.id}</div>${(currentLang==="zh"?p.description_zh:p.description_en) ? `<div class="sub">${currentLang==="zh"?p.description_zh:p.description_en}</div>` : ""}<div class="price">US$${Number(p.price||0).toFixed(2)}</div>
-   <a class="wa" href="https://wa.me/${WA_NUMBER}?text=${text}" target="_blank" rel="noopener">☏ ${currentLang==="zh"?"WhatsApp 咨询":"WhatsApp Inquiry"}</a></div></article>`;
- }).join("");
+   <div class="product-art">${p.image ? `<img class="product-photo" src="${esc(p.image)}" alt="${name}" loading="lazy">` : `<div class="watchface"><div class="dial"></div></div>`}<span class="art-no">NO. ${esc(p.id)}</span></div>
+   <div class="card-info"><div class="model">${name}</div><div class="sub">${cat} · ${zh() ? "型号" : "Model"} ${esc(p.model || p.id)}</div>${desc ? `<div class="sub">${desc}</div>` : ""}<div class="price">US$${Number(p.price || 0).toFixed(2)}</div>
+   <a class="wa" href="https://wa.me/${WA_NUMBER}?text=${text}" target="_blank" rel="noopener">☏ ${zh() ? "WhatsApp 咨询" : "WhatsApp Inquiry"}</a></div></article>`;
+ }).join("") || `<p class="empty">${zh() ? "没有找到符合条件的商品。" : "No products found."}</p>`;
 }
-document.querySelectorAll(".catbtn").forEach(btn => btn.addEventListener("click",()=>{
+function applyLang(){
+ document.documentElement.lang = currentLang;
+ document.querySelectorAll("[data-en][data-zh]").forEach(el => el.textContent = el.dataset[currentLang]);
+ render();
+}
+document.querySelectorAll(".catbtn").forEach(btn => btn.addEventListener("click", () => {
  currentCat = btn.dataset.cat;
- document.querySelectorAll(".catbtn").forEach(b=>b.classList.toggle("active",b===btn));
+ document.querySelectorAll(".catbtn").forEach(b => b.classList.toggle("active", b === btn));
  render();
 }));
-document.getElementById("langBtn").addEventListener("click",()=>{
- currentLang = currentLang === "en" ? "zh" : "en";
- document.documentElement.lang = currentLang;
- document.querySelectorAll("[data-en][data-zh]").forEach(el=>el.textContent = el.dataset[currentLang]);
- render();
+$("q").addEventListener("input", render);
+$("sort").addEventListener("change", render);
+$("langBtn").addEventListener("click", () => {
+ currentLang = zh() ? "en" : "zh";
+ try { localStorage.setItem("lang", currentLang); } catch (e) {}
+ applyLang();
 });
-document.getElementById("year").textContent = new Date().getFullYear();
-fetch("products.json")
- .then(response => { if (!response.ok) throw new Error("products.json not found"); return response.json(); })
- .then(data => { PRODUCTS = data; render(); })
- .catch(error => {
-   document.getElementById("productGrid").innerHTML = '<p style="color:#f2d99b">商品资料加载失败，请检查 products.json 文件是否已上传。</p>';
-   console.error(error);
- });
+$("productGrid").addEventListener("click", e => {
+ if (!e.target.classList.contains("product-photo")) return;
+ $("lb").querySelector("img").src = e.target.src;
+ $("lb").classList.remove("hidden");
+});
+$("lb").addEventListener("click", () => $("lb").classList.add("hidden"));
+document.addEventListener("keydown", e => { if (e.key === "Escape") $("lb").classList.add("hidden"); });
+$("year").textContent = new Date().getFullYear();
+applyLang();
+fetch("products.json?v=" + Date.now(), { cache: "no-store" })
+ .then(r => { if (!r.ok) throw new Error("products.json not found"); return r.json(); })
+ .then(data => { PRODUCTS = Array.isArray(data) ? data : []; loaded = true; render(); })
+ .catch(err => { failed = true; render(); console.error(err); });
 </script>
 </body></html>
