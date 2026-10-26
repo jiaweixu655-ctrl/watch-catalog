@@ -1480,5 +1480,18 @@
     "description_zh": "",
     "image": "land-dweller-127335-0001.jpg",
     "active": true
+  },
+  {
+    "id": "115",
+    "price": 0,
+    "name_en": "Cartier",
+    "name_zh": "卡地亚",
+    "cat_en": "Cartier",
+    "cat_zh": "卡地亚",
+    "model": "",
+    "description_en": "",
+    "description_zh": "",
+    "image": "images/watch-115.jpg",
+    "active": true
   }
 ]
