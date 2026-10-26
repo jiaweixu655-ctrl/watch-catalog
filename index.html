@@ -78,6 +78,7 @@ if(failed){g.innerHTML='<p class="empty">商品资料加载失败，请刷新页
 if(!loaded){g.innerHTML='<p class="empty">Loading… 加载中…</p>';return}
 const all=P.filter(p=>p.active!==false);const cm=new Map();all.forEach(p=>{if(p.cat_en&&!cm.has(p.cat_en))cm.set(p.cat_en,p.cat_zh||p.cat_en)});if(cat!=="all"&&!cm.has(cat))cat="all";
 $("catbar").innerHTML=`<button class="catbtn ${cat==="all"?"active":""}" data-cat="all">All 全部</button>`+[...cm].map(([en,zh])=>`<button class="catbtn ${en===cat?"active":""}" data-cat="${esc(en)}">${esc(en)} ${esc(zh)}</button>`).join("");
+document.querySelector(".categories").classList.toggle("hidden",cm.size<=1);
 const l=list();
 $("styleCount").textContent=L(`${all.length} styles`,`${all.length} 款精选`);$("resultCount").textContent=`${l.length} products / ${l.length} 款商品`;
 $("favBtn").classList.toggle("on",favOnly);$("favbar").classList.toggle("hidden",!favOnly);
