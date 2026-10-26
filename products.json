@@ -1727,5 +1727,18 @@
     "description_zh": "",
     "image": "cartier-wsrd0019.jpg",
     "active": true
+  },
+  {
+    "id": "134",
+    "price": 0,
+    "name_en": "Omega",
+    "name_zh": "欧米茄",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "",
+    "description_en": "",
+    "description_zh": "",
+    "image": "images/watch-134.jpg",
+    "active": true
   }
 ]
