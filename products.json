@@ -1844,5 +1844,18 @@
     "description_zh": "(史努比奖”50周年纪念)",
     "image": "omega-speedmaster-310-32-42-50-02-001.jpg",
     "active": true
+  },
+  {
+    "id": "143",
+    "price": 0,
+    "name_en": "Patek Philippe",
+    "name_zh": "百达翡丽",
+    "cat_en": "Patek Philippe",
+    "cat_zh": "百达翡丽",
+    "model": "",
+    "description_en": "",
+    "description_zh": "",
+    "image": "images/watch-143.jpg",
+    "active": true
   }
 ]
