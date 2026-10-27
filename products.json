@@ -2156,5 +2156,83 @@
     "description_zh": "Must 小号款",
     "image": "cartier-wsta0072.jpg",
     "active": true
+  },
+  {
+    "id": "167",
+    "price": 0,
+    "name_en": "Omega Constellation 131.10.41.21.03.001",
+    "name_zh": "星座系列 131.10.41.21.03.001",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "131.10.41.21.03.001",
+    "description_en": "",
+    "description_zh": "",
+    "image": "omega-constellation-131-10-41-21-03-001.jpg",
+    "active": true
+  },
+  {
+    "id": "168",
+    "price": 0,
+    "name_en": "Omega Constellation 131.20.41.21.03.001",
+    "name_zh": "星座间金款 131.20.41.21.03.001",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "131.20.41.21.03.001",
+    "description_en": "",
+    "description_zh": "",
+    "image": "omega-constellation-131-20-41-21-03-001.jpg",
+    "active": true
+  },
+  {
+    "id": "169",
+    "price": 0,
+    "name_en": "Omega Seamaster 215.30.44.21.01.001",
+    "name_zh": "海马 215.30.44.21.01.001 Planet Ocean",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "215.30.44.21.01.001",
+    "description_en": "",
+    "description_zh": "Planet Ocean",
+    "image": "omega-seamaster-215-30-44-21-01-001.jpg",
+    "active": true
+  },
+  {
+    "id": "170",
+    "price": 0,
+    "name_en": "Omega Seamaster 220.10.41.21.03.004",
+    "name_zh": "海马 220.10.41.21.03.004 Aqua Terra",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "220.10.41.21.03.004",
+    "description_en": "",
+    "description_zh": "Aqua Terra",
+    "image": "omega-seamaster-220-10-41-21-03-004.jpg",
+    "active": true
+  },
+  {
+    "id": "171",
+    "price": 0,
+    "name_en": "Omega Speedmaster 310.30.42.50.01.001",
+    "name_zh": "超霸 310.30.42.50.01.001 Moonwatch",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "310.30.42.50.01.001",
+    "description_en": "",
+    "description_zh": "Moonwatch",
+    "image": "omega-speedmaster-310-30-42-50-01-001.jpg",
+    "active": true
+  },
+  {
+    "id": "172",
+    "price": 0,
+    "name_en": "Omega Speedmaster 310.30.42.50.04.001",
+    "name_zh": "超霸白盘款 310.30.42.50.04.001",
+    "cat_en": "Omega",
+    "cat_zh": "欧米茄",
+    "model": "310.30.42.50.04.001",
+    "description_en": "",
+    "description_zh": "",
+    "image": "omega-speedmaster-310-30-42-50-04-001.jpg",
+    "active": true
   }
 ]
