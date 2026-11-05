@@ -2325,5 +2325,18 @@
     "description_zh": "",
     "image": "patek-philippe-57261a-014.jpg",
     "active": true
+  },
+  {
+    "id": "180",
+    "price": 0,
+    "name_en": "Audemars Piguet",
+    "name_zh": "爱彼手表",
+    "cat_en": "Audemars Piguet",
+    "cat_zh": "爱彼手表",
+    "model": "",
+    "description_en": "",
+    "description_zh": "",
+    "image": "images/watch-180.jpg",
+    "active": true
   }
 ]
